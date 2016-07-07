@@ -1,3 +1,19 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+	float: left;
+	font-size: 1.7em;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+.center {
+	text-align: center;
+}
+
+.jumpbotron h1 {
+	magrin-bottom: 30px;
+	letter-spacing: -1px;
+}
