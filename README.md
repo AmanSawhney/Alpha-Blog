@@ -11,5 +11,7 @@ It was made to learn how to create models without the use of the rails generate 
 
 ## Demo
 
-The demo will up shortly. 
+The demo is available at this link:
+
+https://alpha-blog-amansawhney.herokuapp.com/
 
