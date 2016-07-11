@@ -1,4 +1,7 @@
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 #logo {
 	float: left;
 	font-size: 1.7em;
@@ -18,7 +21,14 @@
 	letter-spacing: -1px;
 
 }
+.article-actions {
+	border-top: 1px solid #eaeaea;
+	padding-top: 5px;
+}
+.description {
+	margin-top: 0;
+}
 
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+
