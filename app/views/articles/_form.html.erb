@@ -1,11 +1,19 @@
 <% if @article.errors.any? %>
-<h2> The following errors prevented the article from getting created</h2>
-<uL>
-	<% @article.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
-	<% end %>
-</ul>
-<% end %>
+<div class= "row">
+	<div class= "col-xs-8 col-xs-offset-2">
+		<div class= "alert alert-danger">
+			<h2 class = "panel-title"> <%= pluralize(@article.errors.count, "error") %> prevented the article from getting created</h2>
+			<div class = "panel-body">
+				<uL>
+					<% @article.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+				</ul>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
 <div class ='row' >
 	<div class = 'col-xs-12'>
 		<%= form_for(@article, :html => {class: "form-horizontal"}) do |f| %>
