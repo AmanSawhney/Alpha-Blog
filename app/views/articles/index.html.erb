@@ -5,6 +5,7 @@
 <br>
 <p class= "center">
 <%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %> </p>
+<% user = User.new(username: "johnny", email:"johnny@example.com"); user.save %>
 <% end %>
 <% @articles.each do |article| %>
 <div class ="row">
