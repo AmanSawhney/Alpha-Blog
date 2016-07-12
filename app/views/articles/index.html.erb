@@ -1,5 +1,11 @@
 <h1 align="center">Listing all articles</h1>
 <br>
+<% if !@articles.any? %>
+<h2 align = "center" > Looks like there are no articles </h2>
+<br>
+<p class= "center">
+<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %> </p>
+<% end %>
 <% @articles.each do |article| %>
 <div class ="row">
 <div class ="col-xs-8 col-xs-offset-2">
