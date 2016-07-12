@@ -1,4 +1,6 @@
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 #logo {
 	float: left;
@@ -39,8 +41,14 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
-@import "bootstrap-sprockets";
-@import "bootstrap";
+.article-actions {
+}
+.article-meta-details {
+	border-top: 1px solid #eaeaea;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
 
 
 

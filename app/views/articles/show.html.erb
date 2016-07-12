@@ -3,5 +3,6 @@
 	<h4 class="center description"> <strong>Description:</strong></h4>
 	<hr>
 	<%= simple_format(@article.description) %>
+	<%= render 'meta', obj: @article %>
 	<%= render 'actions', obj: @article%>
 </div>
