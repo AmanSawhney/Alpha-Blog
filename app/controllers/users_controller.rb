@@ -24,6 +24,11 @@ class UsersController < ApplicationController
 			render :edit #validations failed
 		end
 	end
+
+	def show
+		@user = User.find(params[:id])
+		@articles = Article.all
+	end
 	def user_params 
 		params.require(:user).permit(:username, :email, :password)
 	end
