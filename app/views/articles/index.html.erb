@@ -7,5 +7,5 @@
 	<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %> </p>
 	<% user = User.new(username: "johnny", email:"johnny@example.com"); user.save %>
 	<% end %>
-	<%= render 'shared/list_articles', articlesobj: @articles, userobj: nil %>
+	<%= render 'shared/list_articles', articlesobj: @articles %>
 </table>

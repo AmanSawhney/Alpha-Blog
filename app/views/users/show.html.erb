@@ -5,5 +5,5 @@
 	</div>
 </div>
 <h4 align= "center"> <%= @user.username %>&#39;s articles </h4>
-<%= render 'shared/list_articles', userobj: @user, articlesobj: @articles, userbool: true %>
+<%= render 'shared/list_articles', articlesobj: @user.articles %>
 
