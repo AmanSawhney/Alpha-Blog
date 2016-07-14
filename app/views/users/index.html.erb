@@ -1,11 +1,14 @@
 <h1 align="center"> Listing All Users </h1>
 <br>
+<div align="center">
+	<%= will_paginate %>
+</div>
 <% @users.each do |user| %>
 	<div class ="row">
 		<div class ="col-xs-8 col-xs-offset-2">
 			<div class = "well well-lg">
 				<div class = "article-title">
-					Username: <%= link_to user,username, user_path(user) %>
+					Username: <%= link_to user.username, user_path(user) %>
 				</div>
 				<div class="article-body">
 					Email: <%= truncate(user.email, length: 50) %>
@@ -16,3 +19,6 @@
 		</div>
 	</div>
 <% end %>
+<div align="center">
+	<%= will_paginate %>
+</div>
