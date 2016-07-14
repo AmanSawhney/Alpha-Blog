@@ -1,4 +1,4 @@
 <div class="article-meta-details">
-	<small>Created by: <%= obj.user.username %>, <%=time_ago_in_words(obj.created_at) %> ago, last updated: <%=time_ago_in_words(obj.updated_at) %> ago
+	<small>Created by: <%= link_to obj.user.username, user_path(obj) %>, <%=time_ago_in_words(obj.created_at) %> ago, last updated: <%=time_ago_in_words(obj.updated_at) %> ago
 	</small>
 </div>

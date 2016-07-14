@@ -1,11 +1,13 @@
-<h1 align="center">Listing all articles</h1>
+<h1 align="center"> 
+	<%= "There #{@articles.size == 1 ? 'is' : 'are'} #{@articles.size} post#{'s' unless @articles.size == 1}." %> 
+</h1>
 <br>
 <% if !@articles.any? %>
-<h2 align = "center" > Looks like there are no articles </h2>
-<br>
-<p class= "center">
-	<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %> </p>
-	<% user = User.new(username: "johnny", email:"johnny@example.com"); user.save %>
-	<% end %>
-	<%= render 'shared/list_articles', articlesobj: @articles %>
-</table>
+	<h2 align = "center" > Looks like there are no articles 
+	</h2>
+	<br>
+	<p class= "center">
+		<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %>
+	</p>
+<% end %>
+<%= render 'shared/list_articles', articlesobj: @articles %>
