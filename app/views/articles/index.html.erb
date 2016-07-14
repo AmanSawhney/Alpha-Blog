@@ -1,5 +1,5 @@
 <h1 align="center"> 
-	<%= "There #{@articles.size == 1 ? 'is' : 'are'} #{@articles.size} post#{'s' unless @articles.size == 1}." %> 
+	<%= "There #{@count == 1 ? 'is' : 'are'} #{@count} post#{'s' unless @count == 1}." %> 
 </h1>
 <br>
 <% if !@articles.any? %>
@@ -10,4 +10,10 @@
 		<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %>
 	</p>
 <% end %>
+<div align="center">
+	<%= will_paginate %>
+</div>
 <%= render 'shared/list_articles', articlesobj: @articles %>
+<div align="center">
+	<%= will_paginate %>
+</div>
