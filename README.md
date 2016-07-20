@@ -1,5 +1,5 @@
 # Alpha-Blog
-This is a project outlined in the Udemy Ruby on Rails course.
+>Note: This is made while following the Complete Ruby on Rails course available at <a href="http://Udemy.com"> Udemy </a>
 
 ## What is it?
 
