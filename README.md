@@ -7,7 +7,7 @@ This is an apllication that allows users to create and destroy articles.
 
 ## Why make it?
 
-It was made to learn how to create models without the use of the rails generate command. 
+It was made to learn how to create models without the use of the rails generate command.
 
 Also for learning how to style rails apps using bootstrap
 
@@ -16,4 +16,3 @@ Also for learning how to style rails apps using bootstrap
 The demo is available at this link:
 
 https://alpha-blog-amansawhney.herokuapp.com/
-
