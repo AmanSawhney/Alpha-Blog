@@ -1,4 +1,6 @@
 <div class="article-actions">
+	<% if logged_in? && current_user == obj.user %>
 	<%= link_to "Edit this article", edit_article_path(obj), class: 'btn btn-primary'%>
 	<%= link_to "Delete this article", article_path(obj), method: :delete, data: {confirm: "Are you sure bro"}, class: 'btn btn-danger'%>
+	<% end %>
 </div>
