@@ -9,7 +9,9 @@
 				<%= truncate(article.description, length: 50) %>
 				<%= render 'articles/meta', obj: article %>
 			</div>
+			<% if logged_in? && current_user == article.user %>
 			<%= render 'articles/actions', obj: article %>
+			<% end %>
 		</div>
 	</div>
 </div>
