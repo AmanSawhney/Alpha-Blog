@@ -20,6 +20,10 @@ class UsersController < ApplicationController
     end
 
     def edit
+        if current_user != @user
+            redirect_to root_path
+            flash[:danger] = 'You do not have access to edit that page'
+        end
     end
 
     def update

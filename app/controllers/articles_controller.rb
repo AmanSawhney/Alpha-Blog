@@ -21,6 +21,13 @@ class ArticlesController < ApplicationController
         end
     end
 
+    def edit
+        if @article.user != current_user
+            redirect_to root_path
+            flash[:danger] = 'You do not have permision to edit that article'
+        end
+    end
+
     def update
         if @article.update(article_params)
             flash[:success] = 'Acticle was successfully updated'
