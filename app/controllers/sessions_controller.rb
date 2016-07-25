@@ -1,14 +1,22 @@
 class SessionsController < ApplicationController
 
-	def new 
+	def new
 
 	end
 
 	def create
-		render 'new'
+		user = User.find_by(email: params[:session][:email].downcase)
+		if user && user.authenticate(params[:session][:password])
+			session[:user_id] = user.id #stored by the browser for requests
+			flash[:success] = "You have logged in"
+			redirect_to users_path(user)
+		else
+			flash.now[:danger] = "No user exists with this login information"
+			render 'new'
+		end
 	end
 
-	def destroy 
+	def destroy
 
 	end
 
