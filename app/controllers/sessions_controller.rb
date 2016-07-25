@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:session][:password])
 			session[:user_id] = user.id #stored by the browser for requests
 			flash[:success] = "You have logged in"
-			redirect_to users_path(user)
+			redirect_to user_path(user)
 		else
 			flash.now[:danger] = "No user exists with this login information"
 			render 'new'
