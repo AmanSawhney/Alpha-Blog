@@ -1,14 +1,15 @@
-<h1 align="center"> 
+<h1 align="center">
 	<%= "There #{@count == 1 ? 'is' : 'are'} #{@count} post#{'s' unless @count == 1}." %>
 </h1>
 <br>
 <% if !@articles.any? %>
-	<h2 align = "center" > Looks like there are no posts
-	</h2>
-	<br>
-	<p class= "center">
-		<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %>
-	</p>
+<h2 align="center">
+	Looks like there are no posts
+</h2>
+<br>
+<p class="center">
+	<%= link_to "Create a article", new_article_path,class: 'btn btn-primary btn-lg' %>
+</p>
 <% end %>
 <div align="center">
 	<%= will_paginate %>
