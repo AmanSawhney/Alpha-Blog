@@ -12,8 +12,9 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.username = @user.username.slice(0, 1).capitalize + @user.username.slice(1..-1)
         if @user.save
+            session[:user_id] = @user.id
             flash[:success] = "Welcome to the alpha blog #{@user.username}"
-            redirect_to articles_path
+            redirect_to user_path(@user)
         else
             render :new # validations failed
         end
